@@ -1,0 +1,13 @@
+<swiper-container init="false">
+    @for (item of gallery; track $index) {
+        <swiper-slide class="h-[70vh] flex relative">
+            <img class="w-full h-full object-cover" [src]="item.url" alt="some img">
+            <div class="absolute flex flex-col gap-4 top-0 right-0 w-1/4 h-1/2 mt-[10%] mr-[10%] bg-blue-500 opacity-90 p-4 justify-center items-center text-white rounded-sm">
+                <p class="text-xl m-0">{{item.cardTitle}}</p>
+                <h2 class="text-3xl text-inherit m-0">{{item.cardBigText}}</h2>
+                <p class="text-xl m-0">{{item.cardHashtag}}</p>
+                <a [href]="item.urlButton" class="text-lg font-semibold bg-green-400 px-3 py-2 rounded-full text-inherit hover:text-inherit hover:transition-all hover:ease-in-out border-2 hover:bg-transparent border-solid border-green-400 m-0">{{item.buttonText}}</a>
+            </div>
+        </swiper-slide>
+    }
+</swiper-container>

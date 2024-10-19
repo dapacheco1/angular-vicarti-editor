@@ -1,0 +1,7 @@
+.nav_subitems_container{
+    display: none;
+}
+
+.nav:hover > .nav_subitems_container{
+    display: grid;
+}

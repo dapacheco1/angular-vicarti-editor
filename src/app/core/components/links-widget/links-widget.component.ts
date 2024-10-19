@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { NzIconModule } from 'ng-zorro-antd/icon';
 
 @Component({
-  selector: 'vicarti-shortcut-widget',
+  selector: 'vicarti-links-widget',
   standalone: true,
-  imports: [NzIconModule],
-  templateUrl: './shortcut-widget.component.html',
-  styleUrl: './shortcut-widget.component.scss'
+  imports: [],
+  templateUrl: './links-widget.component.html',
+  styleUrl: './links-widget.component.scss'
 })
-export class ShortcutWidgetComponent {
+export class LinksWidgetComponent {
   public menuItems:Array<{label:string,url:string}> = [
     {
       label:'Informacion Financiera',

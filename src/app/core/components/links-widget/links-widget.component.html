@@ -1,0 +1,8 @@
+<nav class="flex flex-row items-center gap-2 justify-center">
+    @for (item of menuItems; track $index;) {
+        <a [href]="item.url">{{item.label}}</a>
+        @if ($index < menuItems.length - 1) {
+            <div class="h-[60%] border border-r border-red-500"></div>
+        }
+    }
+</nav>
