@@ -1,7 +1,14 @@
 .nav_subitems_container{
-    display: none;
+    visibility: hidden;
+    margin-top: 16px;
+    z-index: -1;
+    height: 25vh;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
 }
 
 .nav:hover > .nav_subitems_container{
-    display: grid;
+    visibility: visible;
+    z-index: 2;
+    opacity: 1;
 }

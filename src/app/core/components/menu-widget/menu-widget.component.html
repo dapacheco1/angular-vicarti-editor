@@ -1,24 +1,33 @@
-<div class="w-full relative">
-    <nav class="w-full flex flex-row justify-between font-semibold text-base py-2 max-w-[1140px] mx-auto ">
+<div class="w-full relative bg-blue-700 text-white">
+    <nav class="w-full flex flex-row justify-between items-center font-semibold text-base py-5 max-w-[1140px] mx-auto ">
         <a class="w-1/2" href="#">
             <img class="w-[12.5rem]"  src="https://www.superarse.edu.ec/imagenes/logo.png" alt="img">
         </a>
-        <ul class=" w-1/2 p-4">
-            <li class="nav">
-                <span class="nav_title hover:cursor-pointer">Nuestro Instituto</span>
-                <ul class="nav_subitems_container bg-red-500 w-full absolute left-0  grid grid-cols-4 p-4">
-                    <li></li>
-                    <li>
-                        <a href="#">Quienes Somos</a>
-                    </li>
-                    <li>
-                        <a href="#">Conoce nuestra oferta academica</a>
-                    </li>
-                    <li>
-                        <a href="">Beneficios al estudiar con nosotros</a>
-                    </li>
-                </ul>
-            </li>
+        <ul class=" w-1/2 mb-0 flex flex-row gap-4">
+            @for (item of hardcodedMenu; track $index) {
+                <li class="nav p-4">
+                    <span class="nav_title hover:cursor-pointer">{{item.label}}</span>
+                    <ul class="nav_subitems_container bg-gray-50 text-orange-500 w-full absolute left-0 py-4 px-2  grid grid-cols-4">
+                        @for (subitem of item.subitems; track $index) {
+                            @if (subitem.type == 'empty') {
+                                <li></li>
+                            }
+                            @if(subitem.type == 'string'){
+                                <li>
+                                    <span class="text-lg mb-3 block">{{subitem.label}}</span>
+                                    <ul class="flex flex-col gap-3">
+                                        @for (option of subitem.options; track $index) {
+                                            <li>
+                                                <a [href]="option.url">{{option.label}}</a>
+                                            </li>
+                                        }
+                                    </ul>
+                                </li>
+                            }
+                        }
+                    </ul>
+                </li>
+            }
         </ul>
     </nav>
 </div>

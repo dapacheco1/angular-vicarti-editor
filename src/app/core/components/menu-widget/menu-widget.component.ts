@@ -18,6 +18,11 @@ export class MenuWidgetComponent implements AfterViewInit{
     subitems:Array<{
       label:string,
       url:string,
+      type:'img' | 'string' | 'empty',
+      options:Array<{
+        label:string,
+        url:string,
+      }>
     }>
   }> = [
     {
@@ -25,8 +30,54 @@ export class MenuWidgetComponent implements AfterViewInit{
       url:'',
       subitems:[
         {
-          label:'Quienes somos',
-          url:'quienes-somos'
+          label:'',
+          url:'',
+          type:'empty',
+          options:[],
+        },
+        {
+          label:'image',
+          url:'https://www.superarse.edu.ec/imagenes/logo.png',
+          type: 'img',
+          options:[],
+        },
+        {
+          label:'QUIENES SOMOS',
+          url:'quienes-somos',
+          type: 'string',
+          options:[
+            {
+              label:'Misión',
+              url:'mision',
+            },
+            {
+              label:'Visión',
+              url:'vision',
+            },
+            {
+              label:'Autoridades',
+              url:'autoridades',
+            }
+          ],
+        },
+        {
+          label:'INVESTIGACION',
+          url:'investigacion',
+          type: 'string',
+          options:[
+            {
+              label:'Acerca de',
+              url:'acerca-de',
+            },
+            {
+              label:'Revista',
+              url:'revista',
+            },
+            {
+              label:'Autoridades',
+              url:'autoridades',
+            }
+          ],
         }
       ]
     },
@@ -35,8 +86,31 @@ export class MenuWidgetComponent implements AfterViewInit{
       url:'',
       subitems:[
         {
+          label:'',
+          url:'',
+          type:'empty',
+          options:[
+            
+          ],
+        },
+        {
           label:'Modalidades',
-          url:'modalidades'
+          url:'modalidades',
+          type:'string',
+          options:[
+            {
+              label:'Misión',
+              url:'mision',
+            },
+            {
+              label:'Visión',
+              url:'vision',
+            },
+            {
+              label:'Autoridades',
+              url:'autoridades',
+            }
+          ],
         }
       ],
     },
@@ -45,8 +119,29 @@ export class MenuWidgetComponent implements AfterViewInit{
       url:'',
       subitems:[
         {
+          label:'',
+          url:'',
+          type:'empty',
+          options:[],
+        },
+        {
           label:'Campus',
-          url:'campus'
+          url:'campus',
+          type:'string',
+          options:[
+            {
+              label:'Misión',
+              url:'mision',
+            },
+            {
+              label:'Visión',
+              url:'vision',
+            },
+            {
+              label:'Autoridades',
+              url:'autoridades',
+            }
+          ],
         }
       ]
     }
