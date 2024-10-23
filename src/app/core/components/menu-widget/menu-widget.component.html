@@ -6,7 +6,7 @@
         <ul class=" w-1/2 mb-0 flex flex-row gap-4">
             @for (item of hardcodedMenu; track $index) {
                 <li class="nav p-4">
-                    <span class="nav_title hover:cursor-pointer">{{item.label}}</span>
+                    <span class="nav_title hover:cursor-pointer flex items-center">{{item.label}} <span nz-icon nzType="caret-down" nzTheme="outline"></span></span>
                     <ul class="nav_subitems_container bg-gray-50 text-orange-500 w-full absolute left-0 py-4 px-2  grid grid-cols-4">
                         @for (subitem of item.subitems; track $index) {
                             @if (subitem.type == 'empty') {
@@ -15,7 +15,7 @@
                             @if(subitem.type == 'string'){
                                 <li>
                                     <span class="text-lg mb-3 block">{{subitem.label}}</span>
-                                    <ul class="flex flex-col gap-3">
+                                    <ul class="flex flex-col gap-2">
                                         @for (option of subitem.options; track $index) {
                                             <li>
                                                 <a [href]="option.url">{{option.label}}</a>

@@ -23,7 +23,7 @@ export class SliderComponent implements OnInit{
       urlButton:'/about',
     },
     {
-      url:'https://cdn.pixabay.com/photo/2021/04/27/04/19/girl-6210483_1280.jpg',
+      url:'https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849821_1280.jpg',
       cardTitle:'Fortalece tu futuro',
       cardBigText:'Escuela de Tecnologías',
       cardHashtag:'#FortaleceTuPropiaHistoria',
@@ -31,7 +31,7 @@ export class SliderComponent implements OnInit{
       urlButton:'/about',
     },
     {
-      url:'https://cdn.pixabay.com/photo/2021/04/27/04/19/girl-6210483_1280.jpg',
+      url:'https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       cardTitle:'Fortalece tu futuro',
       cardBigText:'Escuela de Tecnologías',
       cardHashtag:'#FortaleceTuPropiaHistoria',
@@ -39,7 +39,7 @@ export class SliderComponent implements OnInit{
       urlButton:'/about',
     },
     {
-      url:'https://cdn.pixabay.com/photo/2021/04/27/04/19/girl-6210483_1280.jpg',
+      url:'https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849821_1280.jpg',
       cardTitle:'Fortalece tu futuro',
       cardBigText:'Escuela de Tecnologías',
       cardHashtag:'#FortaleceTuPropiaHistoria',

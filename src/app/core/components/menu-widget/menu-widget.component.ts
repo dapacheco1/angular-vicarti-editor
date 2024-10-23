@@ -1,5 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { AfterViewInit, Component, Inject } from '@angular/core';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 
 
@@ -7,7 +8,7 @@ import { AfterViewInit, Component, Inject } from '@angular/core';
 @Component({
   selector: 'vicarti-menu-widget',
   standalone: true,
-  imports: [],
+  imports: [NzIconModule],
   templateUrl: './menu-widget.component.html',
   styleUrl: './menu-widget.component.scss'
 })

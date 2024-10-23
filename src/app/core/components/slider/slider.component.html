@@ -2,7 +2,7 @@
     @for (item of gallery; track $index) {
         <swiper-slide class="h-[70vh] flex relative">
             <img class="w-full h-full object-cover" [src]="item.url" alt="some img">
-            <div class="absolute flex flex-col gap-4 top-0 right-0 w-1/4 h-1/2 mt-[10%] mr-[10%] bg-blue-700 opacity-90 p-4 justify-center items-center text-white rounded-sm">
+            <div class="absolute flex flex-col gap-4 top-0 right-0 w-1/4 h-1/2 mt-[10%] mr-[10%] bg-blue-700 opacity-80 p-4 justify-center items-center text-white rounded-sm">
                 <p class="text-xl m-0">{{item.cardTitle}}</p>
                 <h2 class="text-3xl text-inherit m-0">{{item.cardBigText}}</h2>
                 <p class="text-xl m-0">{{item.cardHashtag}}</p>
