@@ -1,0 +1,20 @@
+
+<h2 class="text-xl font-semibold mx-28">{{sliderHeader}}</h2>
+<swiper-container [id]="elementId"  class="mx-28" init="false">
+    @for (item of news; track $index) {
+        <swiper-slide class="h-[70vh] flex flex-row gap-4">
+            <div class="flex flex-col">
+                <img class="w-full object-cover" [src]="item.imgUrl" alt="some img">
+                <div class="w-full flex flex-col gap-4 opacity-90 p-4 justify-center items-center shadow-md rounded-sm">
+                    <h3 class="text-xl m-0">{{item.title}}</h3>
+                    <hr class="border boder-solid border-gray-100 w-full">
+                    <p class="text-inherit m-0">{{item.resume}}</p>
+                    @if (isNewSlider) {
+                        <p class="m-0">{{item.date}}</p>
+                    }
+                    <a [href]="item.urlNews" class="text-lg font-semibold bg-green-400 px-3 py-2 rounded-full text-white hover:text-inherit hover:transition-all hover:ease-in-out border-2 hover:bg-transparent border-solid border-green-400 m-0">Leer Más</a>
+                </div>
+            </div>
+        </swiper-slide>
+    }
+</swiper-container>

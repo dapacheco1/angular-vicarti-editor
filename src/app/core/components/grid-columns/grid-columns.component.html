@@ -1,0 +1,14 @@
+<section class="w-full flex justify-center p-4">
+    <div class="mx-auto grid gap-8" [style.grid-template-columns]="'repeat('+listItems.length+', minmax(0, 2fr))'">
+        @for (item of listItems; track $index) {
+            <div class="flex flex-col items-center gap-4 hover:bg-gray-100 p-4">
+                <img class="w-20 hover:translate-y-3 hover:transition-all hover:ease-in-out hover:duration-300" [src]="item.iconUrl" alt="icon">
+                @if (item.labelUrl != '') {
+                    <a class="underline hover:underline text-blue-500 font-semibold text-base" [href]="item.labelUrl">{{item.label}}</a>
+                }@else {
+                    <span class="font-semibold text-base text-blue-500">{{item.label}}</span>
+                }
+            </div>
+        }
+    </div>
+</section>
