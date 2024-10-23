@@ -4,11 +4,12 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA, Inject, Input, OnInit, signal } from
 import { register, SwiperContainer } from 'swiper/element/bundle';
 import { SwiperOptions } from 'swiper/types';
 import moment from 'moment';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 register();
 @Component({
   selector: 'vicarti-content-slider',
   standalone: true,
-  imports: [],
+  imports: [NzIconModule],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './content-slider.component.html',
   styleUrl: './content-slider.component.scss'
