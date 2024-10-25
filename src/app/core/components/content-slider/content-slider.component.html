@@ -1,20 +1,24 @@
 
-<h2 class="text-2xl font-semibold mx-28">{{sliderHeader}}</h2>
-<swiper-container [id]="elementId"  class="mx-28" init="false">
-    @for (item of news; track $index) {
-        <swiper-slide class="h-[70vh] flex flex-row gap-4">
-            <div class="flex flex-col">
-                <img class="w-full object-cover" [src]="item.imgUrl" alt="some img">
-                <div class="w-full flex flex-col gap-4 opacity-90 py-4 px-8 justify-center  shadow-md rounded-sm">
-                    <h3 class="text-xl m-0">{{item.title}}</h3>
-                    <hr class="border boder-solid border-gray-100 w-full">
-                    <p class="text-inherit m-0">{{item.resume}}</p>
-                    @if (isNewSlider) {
-                        <p class="m-0"> <span nz-icon nzType="calendar" nzTheme="outline"></span> {{item.date}}</p>
-                    }
-                    <a [href]="item.urlNews" class="self-start text-lg font-semibold bg-green-600 px-3 py-2 rounded-full text-white hover:text-inherit hover:transition-all hover:ease-in-out border-2 hover:bg-transparent border-solid border-green-600 m-0">Leer Más</a>
+<div class="w-full py-16" [ngClass]="{
+    'bg-gray-100' : hasGrayBackground
+}">
+    <h2 class="text-2xl font-bold mx-28">{{sliderHeader}}</h2>
+    <swiper-container [id]="elementId"  class="mx-28" init="false">
+        @for (item of news; track $index) {
+            <swiper-slide class="h-[70vh] flex flex-row gap-4">
+                <div class="flex flex-col">
+                    <img class="w-full object-cover" [src]="item.imgUrl" alt="some img">
+                    <div class="w-full flex flex-col gap-4 opacity-90 py-4 px-8 justify-center  shadow-md rounded-sm">
+                        <h3 class="text-xl m-0">{{item.title}}</h3>
+                        <hr class="border boder-solid border-gray-100 w-full">
+                        <p class="text-inherit m-0">{{item.resume}}</p>
+                        @if (isNewSlider) {
+                            <p class="m-0"> <span nz-icon nzType="calendar" nzTheme="outline"></span> {{item.date}}</p>
+                        }
+                        <a [href]="item.urlNews" class="self-start text-lg font-semibold bg-green-600 px-3 py-2 rounded-full text-white hover:text-inherit hover:transition-all hover:ease-in-out border-2 hover:bg-transparent border-solid border-green-600 m-0">Leer Más</a>
+                    </div>
                 </div>
-            </div>
-        </swiper-slide>
-    }
-</swiper-container>
+            </swiper-slide>
+        }
+    </swiper-container>
+</div>
